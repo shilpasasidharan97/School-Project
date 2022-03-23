@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'adminapp',
     'staff',
     'student',
-    'parents'
+    'parents',
     
 ]
 
@@ -66,6 +66,7 @@ TEMPLATES = [
             BASE_DIR/'app1/templates/app1',
             BASE_DIR/'adminapp/templates/adminapp',
             BASE_DIR/'staff/templates/teachers',
+            BASE_DIR/'student/templates/students',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -137,6 +138,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, '/app1/static'),
     os.path.join(BASE_DIR,'/adminapp/static'),
     os.path.join(BASE_DIR,'/staff/static'),
+    os.path.join(BASE_DIR,'/student/static'),
 ]
 
 MEDIA_URL = '/media/'

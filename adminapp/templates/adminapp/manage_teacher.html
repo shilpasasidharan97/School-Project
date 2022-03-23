@@ -37,7 +37,7 @@
                             <label for="selectAll"></label>
                         </span>
                     </th>
-                    <th>Teacher ID</th>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Subject</th>
                     <th>Class</th>
@@ -48,6 +48,7 @@
                 </tr>
             </thead>
             <tbody>
+                {% for t in teachers %}
                 <tr>
                     <td>
                         <span class="custom-checkbox">
@@ -55,13 +56,14 @@
                             <label for="checkbox5"></label>
                         </span>
                     </td>
-                    <td>RP105</td>
-                    <td>Manjusha</td>
-                    <td>Maths</td>
-                    <td>10</td>
+                    <td>{{t.t_id}}
+                        <img src="{{t.t_profile.url}}" alt="" width="50px" height="50px"></td>
+                    <td>{{t.t_name}}</td>
+                    <td>{{t.subject}}</td>
+                    <td>{{t.handling_class}}</td>
                     <td>C</td>
                     <td>85%</td>
-                    <td>7012538010</td>
+                    <td>{{t.phone_number}}</td>
                     <td>
                         <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons"
                                 data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -69,6 +71,7 @@
                                 data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                     </td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
 

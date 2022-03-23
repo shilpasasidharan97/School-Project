@@ -32,4 +32,40 @@ class TeacherBasic(models.Model):
     class Meta:
         db_table='teachers'
 
+class AdminDetails(models.Model):
+    admin_id=models.AutoField(primary_key=True)
+    username=models.CharField(max_length=10)
+    password=models.DateField()
 
+    class Meta:
+        db_table='adminlogin'
+
+
+class StudentDetails(models.Model):
+    s_id=models.AutoField(primary_key=True)
+    s_profile=models.ImageField(upload_to='students/')
+    s_name=models.CharField(max_length=20)
+    gender=models.CharField(max_length=7)
+    dob=models.DateField()
+    age=models.IntegerField()
+    religion=models.CharField(max_length=15)
+    cast=models.CharField(max_length=10)
+    place=models.CharField(max_length=20)
+    district=models.CharField(max_length=20)
+    nationality=models.CharField(max_length=20)
+    aadhar_num=models.IntegerField()
+    email_id=models.CharField(max_length=25)
+    phone_number=models.IntegerField()
+    registration_num=models.IntegerField()
+    classs=models.IntegerField()
+    division=models.CharField(max_length=1)
+    father_name=models.CharField(max_length=20)
+    father_occupation=models.CharField(max_length=20)
+    mother_name=models.CharField(max_length=20)
+    mother_occupation=models.CharField(max_length=20)
+    parents_phone=models.IntegerField()
+    parents_email=models.CharField(max_length=30)
+    address=models.CharField(max_length=60)
+
+    class Meta:
+        db_table='students'

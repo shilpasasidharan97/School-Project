@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from adminapp.models import TeacherBasic
+from adminapp.models import StudentDetails, TeacherBasic
 
 
 
@@ -50,15 +50,53 @@ def add_teacher(request):
 
 
 def manage_teacher(request):
-    return render(request, 'manage_teacher.html')
+
+    teachers=TeacherBasic.objects.all()
+    return render(request, 'manage_teacher.html',{'teachers':teachers,})
 
 
 def add_student(request):
-    return render(request, 'add_student.html')
+    msg=""
+    if request.method=='POST':
+        profile=request.FILES['profile']
+        name=request.POST['name']
+        gender=request.POST['gender']
+        dob=request.POST['dob']
+        age=request.POST['age']
+        religion=request.POST['religion']
+        cast=request.POST['cast']
+        place=request.POST['place']
+        dist=request.POST['dist']
+        nationality=request.POST['nationality']
+        aadhar=request.POST['aadhar']
+        email=request.POST['email']
+        phone_number=request.POST['phn']
+        reg_num=request.POST['regnum']
+        classs=request.POST['class']
+        division=request.POST['division']
+        father_name=request.POST['fname']
+        mother_name=request.POST['mname']
+        father_occu=request.POST['focc']
+        mother_occu=request.POST['mocc']
+        parent_phone=request.POST['pphn']
+        parent_email=request.POST['pemail']
+        address=request.POST['address']
+
+        email_exists = StudentDetails.objects.filter(email_id=email).exists()
+        if not email_exists:
+            new_student=StudentDetails(s_profile=profile,s_name=name,gender=gender,dob=dob,age=age,religion=religion,cast=cast,place=place,district=dist,nationality=nationality,aadhar_num=aadhar,email_id=email,phone_number=phone_number,registration_num=reg_num,classs=classs,division=division,father_name=father_name,mother_name=mother_name,father_occupation=father_occu,mother_occupation=mother_occu,parents_phone=parent_phone,parents_email=parent_email,address=address)
+            new_student.save()
+            msg="New student added successfully"
+        else:
+            msg="The student is already exists"
+
+    return render(request, 'add_student.html',{'msg':msg,})
 
 
 def manage_student(request):
-    return render(request, 'manage_student.html')
+
+    students=StudentDetails.objects.all()
+    return render(request, 'manage_student.html',{'students':students,})
 
 
 def add_parents(request):

@@ -21,45 +21,39 @@
         <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
 
-            {% comment %} <!-- Upload Profile Photo --> {% endcomment %}
+            <!-- Upload Profile Photo -->
             <div class="row">
-                {% comment %} <!-- <form action=""> --> {% endcomment %}
-                    <div class="col-lg-6 col-sm-12">
-                        <div class="profile-pic-div">
-                            <img src="{% static 'images/profile.png' %}" class="img-fluid" id="photo">
-                            <input type="file" id="file" name="profile">
-                            <label for="file" id="uploadBtn">Choose Photo</label>
-                        </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="profile-pic-div">
+                        <img src="{% static 'images/profile.png' %}" class="img-fluid" id="photo">
+                        <input type="file" id="file" name="profile">
+                        <label for="file" id="uploadBtn">Choose Photo</label>
                     </div>
-                {% comment %} <!-- </form> --> {% endcomment %}
+                </div>
             </div><br><br><br><br><br>
 
-            {% comment %} <!-- Table starting --> {% endcomment %}
+            <!-- Table starting  -->
             <div class="row"></div>
 
-            {% comment %} <!-- Basic Details --> {% endcomment %}
+
+            <!-- Basic Details -->
             <div class="d-grid gap-2">
                 <button class="btn btn-primary" id="btn1" type="button">Basic Details</button>
             </div>
-            {% comment %} <!-- <form action="" method="POST" id="form1"><br> --> {% endcomment %}
-                {% comment %} <!-- {% csrf_token %} --> {% endcomment %}
+            <div id="form1">
                 <div class="row">
                     <div class="col">
-                        {% comment %} <!--Name field--> {% endcomment %}
+                        <!--Name field-->
                         <input type="text" class="form-control col-lg-10" name="name" placeholder="Enter your Name">
                     </div>
                     <div class="col">
-                        {% comment %} <!-- <input type="text" class="form-control col-lg-10" placeholder="Gender"> --> {% endcomment %}
                         <div class="">
-                            <select class="custom-select form-control col-lg-10" name="gender" id="inputGroupSelect02" >
-                            <option selected>Choose Gender...</option>
-                            <option value="female">Female</option>
-                            <option value="male">Male</option>
-                            <option value="other">Others</option>
+                            <select class="custom-select form-control col-lg-10" name="gender" id="inputGroupSelect02">
+                                <option selected>Choose Gender...</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="other">Others</option>
                             </select>
-                            {% comment %} <!-- <div class="input-group-append"> {% endcomment %}
-                            {% comment %} <label class="input-group-text" for="inputGroupSelect02">Options</label> {% endcomment %}
-                            {% comment %} </div> --> {% endcomment %}
                         </div>
                     </div>
                 </div><br>
@@ -110,21 +104,20 @@
                     <div class="col">
                         <input type="text" class="form-control col-lg-10" name="sub" placeholder="Subject">
                     </div>
-                </div>
-                {% comment %} <!-- <div class="d-grid gap-2" style="margin-top:5px;">
-                    <input type="submit" value="submit">
-                </div> -->
-                <!-- {{msg}}
-            </form> --> {% endcomment %}
-
-            {% comment %} <!-- EDUCATIONAL DETAILS --> {% endcomment %}
-            <div class="d-grid gap-2"  style="margin-top:5px;">
-                <button class="btn btn-primary" id="btn2" type="button">Educational Details</button>
+                </div><br>
             </div>
-            {% comment %} <!-- <form action="" method="" id="form2"><br> --> {% endcomment %}
+
+
+            <!-- EDUCATIONAL DETAILS -->
+            <div class="d-grid gap-2" style="margin-top:5px;">
+                <button class="btn btn-primary" id="btn2" type="button">Educational Details</button>
+            </div><br>
+
+            <div id="form2">
                 <div class="row">
                     <div class="col">
-                        <input type="text" class="form-control col-lg-10" name="qualification" placeholder="Qualification">
+                        <input type="text" class="form-control col-lg-10" name="qualification"
+                            placeholder="Qualification">
                     </div>
                     <div class="col">
                         <input type="text" class="form-control col-lg-10" name="cname" placeholder="College Name">
@@ -132,19 +125,19 @@
                 </div><br>
                 <div class="row">
                     <div class="col">
-                        <input type="file" class="form-control col-lg-10" name="doc1" placeholder="Upload your documents">
+                        <input type="file" class="form-control col-lg-10" name="doc1"
+                            placeholder="Upload your documents">
                     </div>
-                </div>
-                {% comment %} <!-- <div class="d-grid gap-2" style="margin-top:5px;">
-                    <button class="btn btn-success" type="button">Submit</button>
-                </div> -->
-            <!-- </form> --> {% endcomment %}
-
-            {% comment %} <!-- Professional Details --> {% endcomment %}
-            <div class="d-grid gap-2" style="margin-top:5px;">
-                <button class="btn btn-primary" id="btn3" type="button">Professional Details</button>
+                </div><br>
             </div>
-            {% comment %} <!-- <form action="" method="POST" id="form3"><br> --> {% endcomment %}
+
+
+            <!-- Professional Details -->
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" id="btn3" type="button">Professional Details</button>
+            </div><br>
+
+            <div id="form3">
                 <div class="row">
                     <div class="col">
                         <input type="text" class="form-control col-lg-10" name="iname" placeholder="Institution Name">
@@ -152,7 +145,8 @@
                 </div><br>
                 <div class="row">
                     <div class="col">
-                        <input type="number" class="form-control col-lg-10" name="exp" min="0" placeholder="Year of Experiance">
+                        <input type="number" class="form-control col-lg-10" name="exp" min="0"
+                            placeholder="Year of Experiance">
                     </div>
                 </div><br>
                 <div class="row">
@@ -160,14 +154,15 @@
                         <input type="file" class="form-control col-lg-10" name="doc2" placeholder="upload documnets">
                     </div>
                 </div><br>
-                <div class="d-grid gap-2" style="margin-top:5px;">
-                    <input type="submit"class="btn btn-success">
-                    {% comment %} <!-- <button class="btn btn-success" type="button">Submit</button> --> {% endcomment %}
-                </div>
-        </form>
-        {{msg}}
+            </div>
+            <div class="d-grid gap-2" style="margin-top:5px;">
+                <input type="submit" class="btn btn-success">
+            </div>
+        </form><br>
 
-        
+        <span style="margin-left:550px ;"><b><i>{{msg}}</i></b></span>
+
+
 
 
 
@@ -215,14 +210,13 @@
         });
 
 
-    // Form hide and show using jquery
+        // Form hide and show using jquery
         $(document).ready(function () {
             $("#form1").hide()
             $("#btn1").click(function () {
                 $("#form1").toggle()
             })
         })
-
         $(document).ready(function () {
             $("#form2").hide()
             $("#btn2").click(function () {
