@@ -18,141 +18,156 @@
                 </div>
             </div>
         </div>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
 
-        <!-- Upload Profile Photo -->
-        <div class="row">
-            <div class="col-lg-6 col-sm-12">
-                <div class="profile-pic-div">
-                    <img src="{% static 'images/profile.png' %}" class="img-fluid" id="photo">
-                    <input type="file" id="file">
-                    <label for="file" id="uploadBtn">Choose Photo</label>
-                </div>
+            {% comment %} <!-- Upload Profile Photo --> {% endcomment %}
+            <div class="row">
+                {% comment %} <!-- <form action=""> --> {% endcomment %}
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="profile-pic-div">
+                            <img src="{% static 'images/profile.png' %}" class="img-fluid" id="photo">
+                            <input type="file" id="file" name="profile">
+                            <label for="file" id="uploadBtn">Choose Photo</label>
+                        </div>
+                    </div>
+                {% comment %} <!-- </form> --> {% endcomment %}
+            </div><br><br><br><br><br>
+
+            {% comment %} <!-- Table starting --> {% endcomment %}
+            <div class="row"></div>
+
+            {% comment %} <!-- Basic Details --> {% endcomment %}
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" id="btn1" type="button">Basic Details</button>
             </div>
-        </div><br><br><br><br><br>
+            {% comment %} <!-- <form action="" method="POST" id="form1"><br> --> {% endcomment %}
+                {% comment %} <!-- {% csrf_token %} --> {% endcomment %}
+                <div class="row">
+                    <div class="col">
+                        {% comment %} <!--Name field--> {% endcomment %}
+                        <input type="text" class="form-control col-lg-10" name="name" placeholder="Enter your Name">
+                    </div>
+                    <div class="col">
+                        {% comment %} <!-- <input type="text" class="form-control col-lg-10" placeholder="Gender"> --> {% endcomment %}
+                        <div class="">
+                            <select class="custom-select form-control col-lg-10" name="gender" id="inputGroupSelect02" >
+                            <option selected>Choose Gender...</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Others</option>
+                            </select>
+                            {% comment %} <!-- <div class="input-group-append"> {% endcomment %}
+                            {% comment %} <label class="input-group-text" for="inputGroupSelect02">Options</label> {% endcomment %}
+                            {% comment %} </div> --> {% endcomment %}
+                        </div>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col">
+                        <input type="date" class="form-control col-lg-10" name="dob" placeholder="Date of birth">
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control col-lg-10" name="age" placeholder="Age" min="1">
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control col-lg-10" name="religion" placeholder="Religion">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control col-lg-10" name="cast" placeholder="Cast">
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control col-lg-10" name="place" placeholder="Place">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control col-lg-10" name="dist" placeholder="District">
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control col-lg-10" name="nationality" placeholder="Nationality">
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control col-lg-10" name="aadhar" placeholder="Adhar Number">
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col">
+                        <input type="email" class="form-control col-lg-10" name="email" placeholder="Email id">
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control col-lg-10" name="phn" placeholder="Phone Number">
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col">
+                        <input type="number" class="form-control col-lg-10" name="class" placeholder="Handling Class">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control col-lg-10" name="sub" placeholder="Subject">
+                    </div>
+                </div>
+                {% comment %} <!-- <div class="d-grid gap-2" style="margin-top:5px;">
+                    <input type="submit" value="submit">
+                </div> -->
+                <!-- {{msg}}
+            </form> --> {% endcomment %}
 
-        <!-- Table starting -->
-        <div class="row"></div>
-
-        <!-- Basic Details -->
-        <div class="d-grid gap-2">
-            <button class="btn btn-primary" id="btn1" type="button">Basic Details</button>
-        </div>
-        <form action="" method="" id="form1"><br>
-            <div class="row">
-                <div class="col">
-                    <!--Name field-->
-                    <input type="text" class="form-control col-lg-10" placeholder="Enter your Name">
-                </div>
-                <div class="col">
-                    <!-- <input type="text" class="form-control col-lg-10" placeholder="Gender"> -->
-                    <div class="">
-                        <select class="custom-select form-control col-lg-10" id="inputGroupSelect02" >
-                          <option selected>Choose Gender...</option>
-                          <option value="1">Female</option>
-                          <option value="2">Male</option>
-                          <option value="3">Others</option>
-                        </select>
-                        <!-- <div class="input-group-append">
-                          <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                        </div> -->
-                      </div>
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col">
-                    <input type="date" class="form-control col-lg-10" placeholder="Date of birth">
-                </div>
-                <div class="col">
-                    <input type="number" class="form-control col-lg-10" placeholder="Age" min="1">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Religion">
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Cast">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Place">
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="District">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Nationality">
-                </div>
-                <div class="col">
-                    <input type="number" class="form-control col-lg-10" placeholder="Adhar Number">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col">
-                    <input type="email" class="form-control col-lg-10" placeholder="Email id">
-                </div>
-                <div class="col">
-                    <input type="number" class="form-control col-lg-10" placeholder="Phone Number">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col">
-                    <input type="email" class="form-control col-lg-10" placeholder="Handling Class">
-                </div>
-                <div class="col">
-                    <input type="number" class="form-control col-lg-10" placeholder="Subject">
-                </div>
+            {% comment %} <!-- EDUCATIONAL DETAILS --> {% endcomment %}
+            <div class="d-grid gap-2"  style="margin-top:5px;">
+                <button class="btn btn-primary" id="btn2" type="button">Educational Details</button>
             </div>
-        </form>
+            {% comment %} <!-- <form action="" method="" id="form2"><br> --> {% endcomment %}
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control col-lg-10" name="qualification" placeholder="Qualification">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control col-lg-10" name="cname" placeholder="College Name">
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col">
+                        <input type="file" class="form-control col-lg-10" name="doc1" placeholder="Upload your documents">
+                    </div>
+                </div>
+                {% comment %} <!-- <div class="d-grid gap-2" style="margin-top:5px;">
+                    <button class="btn btn-success" type="button">Submit</button>
+                </div> -->
+            <!-- </form> --> {% endcomment %}
 
-        <!-- EDUCATIONAL DETAILS -->
-        <div class="d-grid gap-2"  style="margin-top:5px;">
-            <button class="btn btn-primary" id="btn2" type="button">Educational Details</button>
-        </div>
-        <form action="" method="" id="form2"><br>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Qualification">
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="College Name">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col">
-                    <input type="file" class="form-control col-lg-10" placeholder="Upload your documents">
-                </div>
+            {% comment %} <!-- Professional Details --> {% endcomment %}
+            <div class="d-grid gap-2" style="margin-top:5px;">
+                <button class="btn btn-primary" id="btn3" type="button">Professional Details</button>
             </div>
+            {% comment %} <!-- <form action="" method="POST" id="form3"><br> --> {% endcomment %}
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control col-lg-10" name="iname" placeholder="Institution Name">
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col">
+                        <input type="number" class="form-control col-lg-10" name="exp" min="0" placeholder="Year of Experiance">
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col">
+                        <input type="file" class="form-control col-lg-10" name="doc2" placeholder="upload documnets">
+                    </div>
+                </div><br>
+                <div class="d-grid gap-2" style="margin-top:5px;">
+                    <input type="submit"class="btn btn-success">
+                    {% comment %} <!-- <button class="btn btn-success" type="button">Submit</button> --> {% endcomment %}
+                </div>
         </form>
+        {{msg}}
 
-        <!-- Professional Details -->
-        <div class="d-grid gap-2" style="margin-top:5px;">
-            <button class="btn btn-primary" id="btn3" type="button">Professional Details</button>
-        </div>
-        <form action="" method="" id="form3"><br>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Institution Name">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col">
-                    <input type="number" class="form-control col-lg-10" min="0" placeholder="Year of Experiance">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col">
-                    <input type="file" class="form-control col-lg-10" placeholder="upload documnets">
-                </div>
-            </div><br>
-        </form>
-
-        <div class="d-grid gap-2" style="margin-top:5px;">
-            <button class="btn btn-primary" type="button">Submit</button>
-        </div>
+        
 
 
 

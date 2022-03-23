@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'app1',
     'adminapp',
     'staff',
+    'student',
+    'parents'
     
 ]
 
@@ -85,8 +87,12 @@ WSGI_APPLICATION = 'schoolmgtsystem.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'school_mgt',
+        'USER':'postgres',
+        'PASSWORD':'root',
+        'HOST':'127.0.0.1',
+        'PORT':'5432',
     }
 }
 
@@ -132,6 +138,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'/adminapp/static'),
     os.path.join(BASE_DIR,'/staff/static'),
 ]
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
