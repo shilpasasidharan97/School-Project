@@ -81,7 +81,7 @@
             </div>
             <div class="card-footer">
                 <div class="stats">
-                    <a href="#">See detailed report</a>&nbsp;&nbsp;
+                    <a href="{% url 'adminapp:managestudent' %}">See detailed report</a>&nbsp;&nbsp;
                     <i class="material-icons">arrow_forward</i>
                 </div>
             </div>
@@ -100,7 +100,7 @@
             </div>
             <div class="card-footer">
                 <div class="stats">
-                    <a href="#">See detailed report</a>&nbsp;&nbsp;
+                    <a href="{% url 'adminapp:manageteacher' %}">See detailed report</a>&nbsp;&nbsp;
                     <i class="material-icons">arrow_forward</i>
                 </div>
             </div>
@@ -120,7 +120,7 @@
             </div>
             <div class="card-footer">
                 <div class="stats">
-                    <a href="#pablo">See detailed report</a>&nbsp;&nbsp;
+                    <a href="{% url 'adminapp:manageparents' %}">See detailed report</a>&nbsp;&nbsp;
                     <i class="material-icons">arrow_forward</i>
                 </div>
             </div>
@@ -148,7 +148,7 @@
 </div>
 <section>
     <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6">
+        {% comment %} <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <div class="card-header">
                     <div class="icon icon-warning">
@@ -167,7 +167,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> {% endcomment %}
         <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
                 <div class="card-header">
@@ -182,7 +182,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="stats">
-                        <a href="#pablo">See detailed report</a>&nbsp;&nbsp;
+                        <a href="{% url 'adminapp:classlist' %}">See detailed report</a>&nbsp;&nbsp;
                         <i class="material-icons">arrow_forward</i>
                     </div>
                 </div>

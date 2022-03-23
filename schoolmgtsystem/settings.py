@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app1',
     'adminapp',
+    'staff',
     
 ]
 
@@ -61,7 +62,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             BASE_DIR/'app1/templates/app1',
-            BASE_DIR/'adminapp/templates/adminapp'
+            BASE_DIR/'adminapp/templates/adminapp',
+            BASE_DIR/'staff/templates/teachers',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -128,6 +130,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, '/app1/static'),
     os.path.join(BASE_DIR,'/adminapp/static'),
+    os.path.join(BASE_DIR,'/staff/static'),
 ]
 
 # Default primary key field type

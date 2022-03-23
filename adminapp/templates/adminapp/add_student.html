@@ -14,7 +14,7 @@
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2>Staff name <b>(ID)</b></h2>
+                    <h2>Student name <b>(ID)</b></h2>
                 </div>
             </div>
         </div>
@@ -46,16 +46,16 @@
                 <div class="col">
                     <!-- <input type="text" class="form-control col-lg-10" placeholder="Gender"> -->
                     <div class="">
-                        <select class="custom-select form-control col-lg-10" id="inputGroupSelect02" >
-                          <option selected>Choose Gender...</option>
-                          <option value="1">Female</option>
-                          <option value="2">Male</option>
-                          <option value="3">Others</option>
+                        <select class="custom-select form-control col-lg-10" id="inputGroupSelect02">
+                            <option selected>Choose Gender...</option>
+                            <option value="1">Female</option>
+                            <option value="2">Male</option>
+                            <option value="3">Others</option>
                         </select>
                         <!-- <div class="input-group-append">
                           <label class="input-group-text" for="inputGroupSelect02">Options</label>
                         </div> -->
-                      </div>
+                    </div>
                 </div>
             </div><br>
             <div class="row">
@@ -98,54 +98,67 @@
                     <input type="number" class="form-control col-lg-10" placeholder="Phone Number">
                 </div>
             </div><br>
-            <div class="row">
-                <div class="col">
-                    <input type="email" class="form-control col-lg-10" placeholder="Handling Class">
-                </div>
-                <div class="col">
-                    <input type="number" class="form-control col-lg-10" placeholder="Subject">
-                </div>
-            </div>
         </form>
 
-        <!-- EDUCATIONAL DETAILS -->
-        <div class="d-grid gap-2"  style="margin-top:5px;">
-            <button class="btn btn-primary" id="btn2" type="button">Educational Details</button>
+        <!-- Class DETAILS -->
+        <div class="d-grid gap-2" style="margin-top:5px;">
+            <button class="btn btn-primary" id="btn2" type="button">Class Details</button>
         </div>
+
         <form action="" method="" id="form2"><br>
             <div class="row">
                 <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Qualification">
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="College Name">
+                    <input type="number" class="form-control col-lg-10" placeholder="Registration No">
                 </div>
             </div><br>
             <div class="row">
                 <div class="col">
-                    <input type="file" class="form-control col-lg-10" placeholder="Upload your documents">
+                    <input type="number" class="form-control col-lg-10" placeholder="Class">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control col-lg-10" placeholder="Division">
                 </div>
             </div>
         </form>
 
-        <!-- Professional Details -->
+        <!-- Gaurdian Details -->
         <div class="d-grid gap-2" style="margin-top:5px;">
-            <button class="btn btn-primary" id="btn3" type="button">Professional Details</button>
+            <button class="btn btn-primary" id="btn3" type="button">Gaurdian Details</button>
         </div>
+
         <form action="" method="" id="form3"><br>
+
             <div class="row">
                 <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Institution Name">
+                    <input type="text" class="form-control col-lg-10" placeholder="Father Name">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control col-lg-10" placeholder="Mother Name">
                 </div>
             </div><br>
+
             <div class="row">
                 <div class="col">
-                    <input type="number" class="form-control col-lg-10" min="0" placeholder="Year of Experiance">
+                    <input type="text" class="form-control col-lg-10" min="0" placeholder="Occupation of Father">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control col-lg-10" min="0" placeholder="Occupation of Mother">
                 </div>
             </div><br>
+
             <div class="row">
                 <div class="col">
-                    <input type="file" class="form-control col-lg-10" placeholder="upload documnets">
+                    <input type="number" class="form-control col-lg-10" placeholder="Phone Number">
+                </div>
+                <div class="col">
+                    <input type="email" class="form-control col-lg-10" placeholder="Email">
+                </div>
+            </div><br>
+
+            <div class="row">
+                <div class="col">
+                    <!-- <input type="text" class="form-control col-lg-10" placeholder="Address"> -->
+                    <textarea name="" id="" class="form-control col-lg-10" cols="30" rows="6" placeholder="Address"></textarea>
                 </div>
             </div><br>
         </form>
@@ -200,7 +213,7 @@
         });
 
 
-    // Form hide and show using jquery
+        // Form hide and show using jquery
         $(document).ready(function () {
             $("#form1").hide()
             $("#btn1").click(function () {

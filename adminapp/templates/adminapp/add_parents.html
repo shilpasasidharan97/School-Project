@@ -14,7 +14,7 @@
         <div class="table-title">
             <div class="row">
                 <div class="col-sm-6">
-                    <h2>Staff name <b>(ID)</b></h2>
+                    <h2>Parents name</h2>
                 </div>
             </div>
         </div>
@@ -33,119 +33,88 @@
         <!-- Table starting -->
         <div class="row"></div>
 
-        <!-- Basic Details -->
-        <div class="d-grid gap-2">
-            <button class="btn btn-primary" id="btn1" type="button">Basic Details</button>
+        <!-- Student Details -->
+        <div class="d-grid gap-2" style="margin-top:5px;">
+            <button class="btn btn-primary" id="btn2" type="button">Student Details</button>
+        </div>
+
+        <form action="" method="" id="form2"><br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control col-lg-10" placeholder="Student Name">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control col-lg-10" placeholder="Student ID">
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control col-lg-10" placeholder="Class">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control col-lg-10" placeholder="Division">
+                </div>
+            </div><br>
+        </form>
+
+        <!-- Parents Details -->
+        <div class="d-grid gap-2" style="margin-top:5px;">
+            <button class="btn btn-primary" id="btn1" type="button">Parents Details</button>
         </div>
         <form action="" method="" id="form1"><br>
             <div class="row">
                 <div class="col">
-                    <!--Name field-->
-                    <input type="text" class="form-control col-lg-10" placeholder="Enter your Name">
+                    <input type="text" class="form-control col-lg-10" placeholder="Enter Father Name">
                 </div>
                 <div class="col">
-                    <!-- <input type="text" class="form-control col-lg-10" placeholder="Gender"> -->
-                    <div class="">
-                        <select class="custom-select form-control col-lg-10" id="inputGroupSelect02" >
-                          <option selected>Choose Gender...</option>
-                          <option value="1">Female</option>
-                          <option value="2">Male</option>
-                          <option value="3">Others</option>
-                        </select>
-                        <!-- <div class="input-group-append">
-                          <label class="input-group-text" for="inputGroupSelect02">Options</label>
-                        </div> -->
-                      </div>
+                    <input type="text" class="form-control col-lg-10" placeholder="Enter Mother Name">
                 </div>
             </div><br>
             <div class="row">
                 <div class="col">
-                    <input type="date" class="form-control col-lg-10" placeholder="Date of birth">
+                    <input type="text" class="form-control col-lg-10" placeholder="Father Occupation">
                 </div>
                 <div class="col">
-                    <input type="number" class="form-control col-lg-10" placeholder="Age" min="1">
+                    <input type="text" class="form-control col-lg-10" placeholder="Mother Occupation">
                 </div>
             </div><br>
             <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Religion">
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Cast">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Place">
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="District">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Nationality">
-                </div>
-                <div class="col">
-                    <input type="number" class="form-control col-lg-10" placeholder="Adhar Number">
-                </div>
-            </div><br>
-            <div class="row">
-                <div class="col">
-                    <input type="email" class="form-control col-lg-10" placeholder="Email id">
-                </div>
                 <div class="col">
                     <input type="number" class="form-control col-lg-10" placeholder="Phone Number">
                 </div>
-            </div><br>
-            <div class="row">
                 <div class="col">
-                    <input type="email" class="form-control col-lg-10" placeholder="Handling Class">
-                </div>
-                <div class="col">
-                    <input type="number" class="form-control col-lg-10" placeholder="Subject">
-                </div>
-            </div>
-        </form>
-
-        <!-- EDUCATIONAL DETAILS -->
-        <div class="d-grid gap-2"  style="margin-top:5px;">
-            <button class="btn btn-primary" id="btn2" type="button">Educational Details</button>
-        </div>
-        <form action="" method="" id="form2"><br>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Qualification">
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="College Name">
+                    <input type="email" class="form-control col-lg-10" placeholder="Email id">
                 </div>
             </div><br>
             <div class="row">
                 <div class="col">
-                    <input type="file" class="form-control col-lg-10" placeholder="Upload your documents">
+                    <textarea name="" id="" cols="30" rows="6" placeholder="Address" class="form-control col-lg-10"></textarea>
                 </div>
-            </div>
+            </div><br>
         </form>
 
-        <!-- Professional Details -->
+        <!-- Bank Account Details -->
         <div class="d-grid gap-2" style="margin-top:5px;">
-            <button class="btn btn-primary" id="btn3" type="button">Professional Details</button>
+            <button class="btn btn-primary" id="btn3" type="button">Bank Account Details</button>
         </div>
+
         <form action="" method="" id="form3"><br>
+
             <div class="row">
                 <div class="col">
-                    <input type="text" class="form-control col-lg-10" placeholder="Institution Name">
+                    <input type="text" class="form-control col-lg-10" placeholder="Account Holder Name">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control col-lg-10" placeholder="Branch Name">
                 </div>
             </div><br>
+
             <div class="row">
                 <div class="col">
-                    <input type="number" class="form-control col-lg-10" min="0" placeholder="Year of Experiance">
+                    <input type="number" class="form-control col-lg-10" min="0" placeholder="Account Number">
                 </div>
-            </div><br>
-            <div class="row">
                 <div class="col">
-                    <input type="file" class="form-control col-lg-10" placeholder="upload documnets">
+                    <input type="text" class="form-control col-lg-10" min="0" placeholder="IFSC code">
                 </div>
             </div><br>
         </form>
@@ -200,7 +169,7 @@
         });
 
 
-    // Form hide and show using jquery
+        // Form hide and show using jquery
         $(document).ready(function () {
             $("#form1").hide()
             $("#btn1").click(function () {
